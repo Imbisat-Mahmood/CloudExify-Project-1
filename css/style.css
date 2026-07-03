@@ -88,7 +88,7 @@ img { max-width: 100%; display: block; }
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(60px);
   opacity: 0.35;
   will-change: transform;
 }
@@ -112,6 +112,13 @@ img { max-width: 100%; display: block; }
   background: var(--accent-2);
   bottom: -15%; left: 25%;
   animation: drift3 24s ease-in-out infinite;
+}
+
+/* Cut compositing cost on small screens — fewer, smaller, lighter blobs */
+@media (max-width: 768px) {
+  .blob { filter: blur(40px); }
+  .blob-2, .blob-3 { display: none; }
+  .blob-1 { width: 320px; height: 320px; }
 }
 
 @keyframes drift1 {
@@ -891,6 +898,21 @@ header {
   font-size: 0.92rem;
   line-height: 1.6;
   margin-bottom: 22px;
+}
+
+/* Reduce backdrop-filter compositing cost on mobile — biggest perf lever for Glass & Gradient */
+@media (max-width: 768px) {
+  .skill-group,
+  .project-card,
+  .contact-form,
+  .contact-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 
 /* ============================================

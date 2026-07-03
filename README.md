@@ -15,7 +15,7 @@
 - Page-load skeleton animation
 - Second (and third, fourth) signature feature — see above
 
-**Live Vercel Link:** _(add after deploying)_
+**Live Vercel Link:** https://cloudexify-web-p1-imbisaat.vercel.app/
 
 ## Tech Stack
 HTML5, CSS3 (custom properties, Grid, Flexbox), Vanilla JavaScript — no frameworks, no build step.
