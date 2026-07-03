@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Imbisaat Mahmood — Computer Science undergraduate building full-stack web, mobile, and AI/ML products.">
+<title>Imbisaat Mahmood | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Skeleton loader -->
+<div class="skeleton-loader" id="skeletonLoader">
+  <div class="skeleton-mark">IM</div>
+</div>
+
+<!-- Aurora background -->
+<div class="aurora" aria-hidden="true">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <span class="blob blob-3"></span>
+</div>
+
+<header>
+  <nav class="navbar container">
+    <a href="#hero" class="logo">IM<span class="dot">.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+      <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="assets/Imbisaat_Mahmood_CV.pdf" class="btn-resume" download aria-label="Download resume">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Resume</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Computer Science · COMSATS University Islamabad</p>
+      <h1 class="hero-title">
+        Hi, I'm <span class="accent-text">Imbisaat</span><br>
+        I build <span id="typedText" class="typed"></span><span class="cursor">|</span>
+      </h1>
+      <p class="hero-subtitle">
+        3rd-year CS undergrad building full-stack web, mobile, and AI/ML products end to end —
+        currently developing an AI voice receptionist as my final year project, alongside shipped
+        work like an intrusion detection system trained on 8000+ records.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/Imbisaat_Mahmood_CV.pdf" class="btn btn-ghost" download>Download Resume</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">AI/ML Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-eyebrow">01 · About</p>
+      <h2 class="section-title">A builder who finishes what he starts</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Computer Science undergraduate at COMSATS University Islamabad, Wah Campus, currently in
+            my final year. My interest sits at the intersection of full-stack engineering and applied AI —
+            I like taking a model or an API and wrapping real, usable software around it.
+          </p>
+          <p>
+            My current focus is <strong>Chatley.ai</strong>, my Final Year Project: an AI-powered voice
+            receptionist built for Pakistani SMEs, combining Twilio telephony, Whisper speech-to-text,
+            GPT-4, and Google Cloud TTS into a single call pipeline with a Flutter analytics dashboard.
+          </p>
+          <p>
+            Outside of coursework, I've shipped machine learning systems, cross-platform mobile apps, and
+            full-stack platforms solo and in teams — and I'm working through the DeepLearning.AI Deep
+            Learning Specialization to sharpen the ML side further.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">2023 – 2027</span>
+            <h3>BS Computer Science</h3>
+            <p>COMSATS University Islamabad, Wah Campus · CGPA 3.21/4.00</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Jun 2026</span>
+            <h3>Supervised Machine Learning</h3>
+            <p>DeepLearning.AI &amp; Stanford University, via Coursera</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Jun 2026</span>
+            <h3>Generative AI · LLMs · Responsible AI</h3>
+            <p>Google Cloud</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Jul 2026</span>
+            <h3>Neural Networks and Deep Learning</h3>
+            <p>DeepLearning.AI &amp; Stanford University, via Coursera</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">2025 – Present</span>
+            <h3>Chatley.ai — Final Year Project</h3>
+            <p>Building an AI voice receptionist platform, in progress</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow">02 · Skills</p>
+      <h2 class="section-title">Tools I reach for</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="skill" data-percent="90">
+            <div class="skill-head"><span>Python</span><span class="skill-val">90%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="80">
+            <div class="skill-head"><span>Java</span><span class="skill-val">80%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="82">
+            <div class="skill-head"><span>Dart</span><span class="skill-val">82%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="75">
+            <div class="skill-head"><span>PHP</span><span class="skill-val">75%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Frameworks &amp; Libraries</h3>
+          <div class="skill" data-percent="85">
+            <div class="skill-head"><span>Flutter</span><span class="skill-val">85%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="78">
+            <div class="skill-head"><span>Laravel</span><span class="skill-val">78%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="80">
+            <div class="skill-head"><span>Flask</span><span class="skill-val">80%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="88">
+            <div class="skill-head"><span>Scikit-learn / Pandas</span><span class="skill-val">88%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>AI &amp; ML</h3>
+          <div class="skill" data-percent="85">
+            <div class="skill-head"><span>Neural Networks / Deep Learning</span><span class="skill-val">85%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="82">
+            <div class="skill-head"><span>GPT-4 · Whisper · TTS pipelines</span><span class="skill-val">82%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="80">
+            <div class="skill-head"><span>Supervised ML</span><span class="skill-val">80%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Cloud, DB &amp; Tools</h3>
+          <div class="skill" data-percent="78">
+            <div class="skill-head"><span>Google Cloud Platform</span><span class="skill-val">78%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="76">
+            <div class="skill-head"><span>MySQL / MongoDB / Supabase</span><span class="skill-val">76%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+          <div class="skill" data-percent="85">
+            <div class="skill-head"><span>Git &amp; GitHub</span><span class="skill-val">85%</span></div>
+            <div class="bar"><div class="fill"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-eyebrow">03 · Projects</p>
+      <h2 class="section-title">Things I've shipped</h2>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="java">Java / Desktop</button>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card" data-tags="ai,mobile,web">
+          <div class="project-top">
+            <span class="project-tag">In Progress · FYP</span>
+          </div>
+          <h3>Chatley.ai — AI Voice Receptionist</h3>
+          <p>AI-powered voice receptionist for Pakistani SMEs. Calls flow through Twilio → Whisper
+             speech-to-text → GPT-4 → Google Cloud TTS, with a Flutter dashboard for call analytics.</p>
+          <div class="tech-tags">
+            <span>Twilio</span><span>Whisper</span><span>GPT-4</span><span>Google Cloud TTS</span><span>Flutter</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="ai,web">
+          <div class="project-top">
+            <span class="project-tag">94%+ Accuracy</span>
+          </div>
+          <h3>Network Intrusion Detection System</h3>
+          <p>Supervised ML system detecting malicious network traffic on 80,000+ records. Compared
+             Random Forest, SVM, KNN, and Decision Tree via cross-validation to select the optimal model.</p>
+          <div class="tech-tags">
+            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Random Forest</span>
+          </div>
+          <a href="https://github.com/Imbisat-Mahmood/NIDS" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card" data-tags="mobile">
+          <div class="project-top">
+            <span class="project-tag">4 Sprint Cycles</span>
+          </div>
+          <h3>BloodConnect — Blood Donation App</h3>
+          <p>Cross-platform mobile app with real-time, location-based donor-recipient matching,
+             delivered across four agile sprint cycles with a team.</p>
+          <div class="tech-tags">
+            <span>Flutter</span><span>Supabase</span><span>Dart</span><span>Agile</span>
+          </div>
+          <a href="https://github.com/Imbisat-Mahmood/BloodConnect" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card" data-tags="ai,web">
+          <div class="project-top">
+            <span class="project-tag">Full-Stack + ML</span>
+          </div>
+          <h3>CafeFlow System</h3>
+          <p>Full-stack cafe management system pairing a Laravel frontend with a Flask ML backend,
+             integrating a demand forecasting model through a RESTful API.</p>
+          <div class="tech-tags">
+            <span>Laravel</span><span>Flask</span><span>Python</span><span>MySQL</span>
+          </div>
+          <a href="https://github.com/Imbisat-Mahmood/CafeFlow" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card" data-tags="web">
+          <div class="project-top">
+            <span class="project-tag">Solo Project</span>
+          </div>
+          <h3>Evara — E-Commerce Website</h3>
+          <p>Full-stack e-commerce platform with a shopping cart, admin dashboard, secure auth, and a
+             normalized database schema covering 50+ product categories.</p>
+          <div class="tech-tags">
+            <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://github.com/Imbisat-Mahmood/evara-ecommerce-website" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </article>
+
+        <article class="project-card" data-tags="java">
+          <div class="project-top">
+            <span class="project-tag">Solo Project</span>
+          </div>
+          <h3>Bank Management System</h3>
+          <p>Secure desktop banking system covering account creation, deposits, withdrawals, balance
+             inquiries, and transaction history, backed by persistent MySQL storage.</p>
+          <div class="tech-tags">
+            <span>Java</span><span>Java Swing</span><span>MySQL</span><span>JDBC</span>
+          </div>
+          <a href="https://github.com/Imbisat-Mahmood/Bank-Management-System" target="_blank" rel="noopener" class="project-link">
+            View on GitHub
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults" hidden>No projects match this filter yet.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow">04 · Contact</p>
+      <h2 class="section-title">Let's work together</h2>
+      <p class="contact-intro">
+        Open to software engineering internships and collaborative builds. The fastest way to reach me
+        is email — I'll usually reply within a day.
+      </p>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What are you working on?"></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <div class="form-success" id="formSuccess" hidden>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Thanks — your message has been noted. I'll get back to you soon.</span>
+          </div>
+        </form>
+
+        <div class="contact-side">
+          <a href="mailto:imbisatmahmood05@gmail.com" class="contact-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">imbisatmahmood05@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/Imbisat-Mahmood" target="_blank" rel="noopener" class="contact-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">Imbisat-Mahmood</span>
+            </div>
+          </a>
+          <a href="https://pk.linkedin.com/in/imbisat-mahmood-7219442a8" target="_blank" rel="noopener" class="contact-card">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">Connect with me</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#hero" class="logo">IM<span class="dot">.</span></a>
+    <p>&copy; 2026 Imbisaat Mahmood. Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<!-- Hidden Easter Egg — Konami Code -->
+<div class="easter-egg" id="easterEgg" hidden>
+  <div class="easter-egg-card">
+    <span class="easter-egg-badge">🏆</span>
+    <h3>Achievement Unlocked</h3>
+    <p>You found the Konami code. Not many recruiters make it this far — nice.</p>
+    <button class="btn btn-primary" id="closeEasterEgg">Nice find</button>
+  </div>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
